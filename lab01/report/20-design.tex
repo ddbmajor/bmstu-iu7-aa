@@ -1,0 +1,117 @@
+\section{Конструкторская часть}
+\subsection{Алгоритмы поиска редакционных расстояний}
+\subsubsection{Иттерационный алгоритм поиска расстояния Левенштейна}
+\begin{figure}[h]
+	\centering
+    \def\svgscale{0.75}
+	\includesvg[]{img/l1.svg}
+	% \caption{Русунок 1. Иттерационный алгоритм поиска расстояния Левенштейна}
+	\label{fig:d11}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+    \def\svgscale{0.5}
+	\includesvg[]{img/l2.svg}
+	\caption{Иттерационный алгоритм поиска расстояния Левенштейна}
+	\label{fig:d12}
+\end{figure}
+\pagebreak
+
+Оценка памяти алгоритма:\par
+Пусть n - длина строки s1, m - длина строки s2\par
+Тогда затраты по памяти будут:\par
+\begin{itemize}
+	\item[-] для матрицы - ((n+1)*(m+1)*sizeof(int))
+	\item[-] для s1, s2 - ((n+m)*sizeof(char))
+	\item[-] для n, m - (2*sizeof(int))
+	\item[-] для переменных индексации - (2*sizeof(int))
+	\item[-] для предыдущих символов строк- (2*sizeof(char))
+	\item[-] адрес возврата - (sizeof(int*))
+\end{itemize}
+\pagebreak
+
+\subsubsection{Иттерационный алгоритм поиска расстояния\\ Дамерау-Левенштейна}
+\begin{figure}[h]
+	\centering
+    \def\svgscale{0.75}
+	\includesvg[]{img/d1.svg}
+	% \caption{Русунок 1. Иттерационный алгоритм поиска расстояния Левенштейна}
+	\label{fig:d21}
+\end{figure}
+\begin{figure}[h]
+	\centering
+    \def\svgscale{0.75}
+	\includesvg[]{img/d2.svg}
+	% \caption{Иттерационный алгоритм поиска расстояния Левенштейна}
+	\label{fig:d22}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+    \def\svgscale{0.4}
+	\includesvg[]{img/d3.svg}
+	\caption{Иттерационный алгоритм поиска расстояния Дамерау-Левенштейна}
+	\label{fig:d23}
+\end{figure}
+\pagebreak
+Оценка памяти алгоритма:\par
+Пусть n - длина строки s1, m - длина строки s2\par
+Тогда затраты по памяти будут:\par
+\begin{itemize}
+	\item[-] для матрицы - ((n+1)*(m+1)*sizeof(int))
+	\item[-] для s1, s2 - ((n+m)*sizeof(char))
+	\item[-] для n, m - (2*sizeof(int))
+	\item[-] для переменных индексации - (2*sizeof(int))
+	\item[-] для предыдущих символов строк- (4*sizeof(char))
+	\item[-] адрес возврата - (sizeof(int*))
+\end{itemize}
+
+\subsubsection{Рекурсивный алгоритм поиска расстояния Дамерау-Левенштейна}
+\begin{figure}[h]
+	\centering
+	\includesvg[width=\textwidth]{img/dr1.svg}
+	% \caption{Рекурсивный алгоритм поиска расстояния Дамерау-Левенштейна}
+	\label{fig:d31}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includesvg[width=\textwidth]{img/dr2.svg}
+	\caption{Рекурсивный алгоритм поиска расстояния Дамерау-Левенштейна}
+	\label{fig:d32}
+\end{figure}
+\pagebreak
+Оценка памяти алгоритма:\par
+Пусть n - длина строки s1, m - длина строки s2\par
+Тогда затраты по памяти \textbf{для каждого вызова} будут:\par
+\begin{itemize}
+	\item[-] для s1, s2 - ((n+m)*sizeof(char))
+	\item[-] для n, m - (2*sizeof(int))
+	\item[-] для предыдущих символов строк- (4*sizeof(char))
+	\item[-] адрес возврата - (sizeof(int*))
+\end{itemize}
+\pagebreak
+
+\subsubsection{Рекурсивный с кэшем алгоритм поиска расстояния Дамерау-Левенштейна}
+\begin{figure}[h]
+	\centering
+	\includesvg[width=\textwidth]{img/drc1.svg}
+	% \caption{Рекурсивный алгоритм поиска расстояния Дамерау-Левенштейна}
+	\label{fig:d41}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includesvg[width=\textwidth]{img/drc2.svg}
+	\caption{Рекурсивный с кэшем алгоритм поиска расстояния Дамерау-Левенштейна}
+	\label{fig:d42}
+\end{figure}
+\pagebreak
+Оценка памяти алгоритма:\par
+Пусть n - длина строки s1, m - длина строки s2\par
+Тогда затраты по памяти помимо матрицы((n+1)*(m+1)*sizeof(int)) \textbf{для каждого вызова} будут:\par
+\begin{itemize}
+	\item[-] для s1, s2 - ((n+m)*sizeof(char))
+	\item[-] для n, m - (2*sizeof(int))
+	\item[-] для предыдущих символов строк- (4*sizeof(char))
+	\item[-] адрес возврата - (sizeof(int*))
+	\item[-] ссылка на матрицу - (sizeof(int**))
+\end{itemize}
+\pagebreak
