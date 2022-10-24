@@ -259,49 +259,27 @@ void iomode()
 
 }
 
-double exp(int mode, int func(char*, int, char*, int))
+double exp(int len, int func(char*, int, char*, int))
 {
-    char *str1;
-    char *str2;
-    int l1, l2;
-    int times;
-    switch (mode)
+    char *symbols = "qwertyuiopasdfghjklzxcvbnm";
+    char str1[30];
+    char str2[30];
+    int times = 100;
+    if (func == damereu_rec)
+        times = 5;
+    
+    srand(time(NULL));
+    for (int i = 0; i < len; i++)
     {
-    case 0:
-        str1 = "qwerty";
-        str2 = "asdfgh";
-        l1 = l2 = 6;
-        times = 10000;
-        break;
-    case 1:
-        str1 = "qwertyuiopqwertyuioqwertyuiopqwertyuiopqqwertyuioq";
-        str2 = "ertyujnbvcdtyjkmnbvcdyukhjfyujnbvcdrklkytfcvbnkugg";
-        l1 = l2 = 50;
-        times = 1;
-        if (func == damereu_rec)
-        {
-            times = 1;
-        }
-        break;
-    case 2:
-        str1 = "qwertyuiopqwertyuioqwertyuiopqwertyuiopqqwertyuioqertyujnbvcdtyjkmnbvcdyukhjfyujnbvcdrklkytfcvbnkugg";
-        str2 = "ertyujnbvcdtyjkmnbvcdyukhjfyujnbvcdrklkytfcvbnkuggqwertyuiopqwertyuioqwertyuiopqwertyuiopqqwertyuioq";
-        l1 = l2 = 100;
-        times = 10;
-        if (func == damereu_rec)
-        {
-            times = 1;
-        }
-        break;
-    default:
-        break;
+        str1[i] = symbols[rand() % 26];
+        str2[i] = symbols[rand() % 26];
     }
 
     double cpu_time_used = 0;
     for (size_t i = 0; i < times; i++)
     {
         clock_t start = clock();
-        func(str1, l1, str2, l2);
+        func(str1, len, str2, len);
         clock_t end = clock();
         cpu_time_used += ((double)(end - start)) / CLOCKS_PER_SEC;
     }
@@ -311,31 +289,34 @@ double exp(int mode, int func(char*, int, char*, int))
 
 
 void experiment()
-{
+{    
+    printf("| Длина | Левенштейн | Дамерау | Дамерау c рекурсией | Дамерау с рекурсией и кэшем |\n");
+    for (int len = 0; len < 15; len++)
+    {
     // short word
-    double l = exp(0, &levenshtein);
-    double d = exp(0, &damerau);
-    double dr = exp(0, &damereu_rec);
-    double drc = exp(0, &damereu_rec_cache);
+    double l = exp(len, &levenshtein);
+    double d = exp(len, &damerau);
+    double dr = exp(len, &damereu_rec);
+    double drc = exp(len, &damereu_rec_cache);
 
-    printf("Короткое слово (6 символов), количество повторение - 10000\n\n");
-    printf("Левенштейн - %f\nДамерау - %f\nДамерау c рекурсией - %f\nДамерау с рекурсией и кэшем - %f\n", l, d, dr, drc);
-    
-    // medium word
-    l = exp(1, &levenshtein);
-    printf("1 done\n");
-    d = exp(1, &damerau);
-    printf("2 done\n");
-    drc = exp(1, &damereu_rec_cache);
-    printf("3 done\n");
-    dr = exp(1, &damereu_rec);
-    printf("4 done\n");
-
-    printf("Среднее слово (50 символов), количество повторение - 100\n\n");
-    printf("Левенштейн - %f\nДамерау - %f\nДамерау c рекурсией - %f\nДамерау с рекурсией и кэшем - %f\n", l, d, dr, drc);
-
-    // long word
+    printf("|%d|%f|%f|%f|%f|\n", len, l, d, dr, drc);
+    }
 }
+
+// |0|0.000001|0.000001|0.000001|0.000001|
+// |1|0.000001|0.000001|0.000001|0.000001|
+// |2|0.000001|0.000001|0.000001|0.000002|
+// |3|0.000001|0.000001|0.000002|0.000002|
+// |4|0.000002|0.000001|0.000006|0.000003|
+// |5|0.000002|0.000002|0.000039|0.000004|
+// |6|0.000003|0.000002|0.000201|0.000006|
+// |7|0.000003|0.000002|0.000994|0.000007|
+// |8|0.000004|0.000004|0.006436|0.000008|
+// |9|0.000004|0.000005|0.015010|0.000003|
+// |10|0.000001|0.000002|0.053566|0.000004|
+// |11|0.000002|0.000002|0.291436|0.000004|
+// |12|0.000002|0.000002|1.624380|0.000005|
+// |13|0.000002|0.000002|9.086192|0.000005|
 
 
 int main(void)
