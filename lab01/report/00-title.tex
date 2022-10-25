@@ -1,69 +1,39 @@
 \begin{titlepage}
-	\noindent\begin{minipage}{0.05\textwidth}
-		\includegraphics[scale=0.3]{img/bmstu.png}
+	\newgeometry{pdftex, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+	\fontsize{12pt}{12pt}\selectfont
+	\noindent \begin{minipage}{0.15\textwidth}
+		\includegraphics[width=\linewidth]{img/bmstu.png}
 	\end{minipage}
-	\hfill
-	\begin{minipage}{0.85\textwidth}\raggedleft
-		\begin{center}
-			\fontsize{12pt}{0.3\baselineskip}\selectfont \textbf{Министерство науки и высшего образования Российской Федерации \\ Федеральное государственное бюджетное образовательное учреждение \\ высшего образования \\ <<Московский государственный технический университет \\ имени Н.Э. Баумана \\ (национальный исследовательский университет)>> \\ (МГТУ им. Н.Э. Баумана)}
-		\end{center}
+	\noindent\begin{minipage}{0.9\textwidth}\centering
+		\textbf{Министерство науки и высшего образования Российской Федерации}\\
+		\textbf{Федеральное государственное бюджетное образовательное учреждение высшего образования}\\
+		\textbf{«Московский государственный технический университет имени Н.~Э.~Баумана}\\
+		\textbf{(национальный исследовательский университет)»}\\
+		\textbf{(МГТУ им. Н.~Э.~Баумана)}
 	\end{minipage}
-
+	
+	\noindent\rule{18cm}{3pt}
+	\newline\newline
+	\noindent ФАКУЛЬТЕТ $\underline{\text{«Информатика и системы управления»~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$ \newline\newline
+	\noindent КАФЕДРА $\underline{\text{«Программное обеспечение ЭВМ и информационные технологии»~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline\newline\newline\newline\newline\newline
+	
+	
 	\begin{center}
-		\fontsize{12pt}{0.1\baselineskip}\selectfont
-		\noindent\makebox[\linewidth]{\rule{\textwidth}{4pt}} \makebox[\linewidth]{\rule{\textwidth}{1pt}}
+		\Large\textbf{Отчет по лабораторной работе № 1}\newline
+		\Large\textbf {по курсу "Анализ алгоритмов"}\newline
 	\end{center}
-
-	\begin{flushleft}
-		\fontsize{12pt}{0.8\baselineskip}\selectfont 
-		
-		ФАКУЛЬТЕТ \uline{<<\textbf{Информатика и системы управления}>> \hfill}
-
-		КАФЕДРА \uline{\mbox{\hspace{4mm}} <<\textbf{Программное обеспечение ЭВМ и информационные технологии}>> \hfill}
-	\end{flushleft}
-
-	\vfill
-
+	
+	\noindent\textbf{Тема} $\underline{\text{~~Расстояния Левенштейна и Дамерау-Левенштейна~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline\newline
+	\noindent\textbf{Студент} $\underline{\text{~~Баринов Н. Ю.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline
+	\noindent\textbf{Группа} $\underline{\text{~~ИУ7-51Б~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline
+	\noindent\textbf{Оценка (баллы)} $\underline{\text{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline
+	\noindent\textbf{Преподаватель} $\underline{\text{~~Волкова Л. Л.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline
+	\noindent\textbf{Преподаватель} $\underline{\text{~~Строганов Ю. В.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline
+	
 	\begin{center}
-		\fontsize{20pt}{\baselineskip}\selectfont
-
-		\textbf{ОТЧЕТ}
-
-		\textbf{\textit{ПО ЛАБОРАТОРНОЙ РАБОТЕ №1}}
-
+		\vfill
+		Москва~---~\the\year
+		~г.
 	\end{center}
-
-	\begin{center}
-		\fontsize{18pt}{0.6cm}\selectfont 
-		
-		
-	\end{center}
-
-	\vfill
-
-	\begin{table}[h!]
-		\fontsize{12pt}{0.7\baselineskip}\selectfont
-		\centering
-		\begin{signstabular}[0.7]{p{7.25cm} >{\centering\arraybackslash}p{4cm} >{\centering\arraybackslash}p{4cm}}
-			Студент группы \textbf{ИУ7-51Б} & \uline{\mbox{\hspace*{4cm}}} & \uline{\hfill \textbf{Н.Ю. Баринов} \hfill} \\
-			& \scriptsize (Подпись, дата) & \scriptsize (И.О. Фамилия)
-		\end{signstabular}
-
-		\vspace{\baselineskip}
-
-		\begin{signstabular}[0.7]{p{7.25cm} >{\centering\arraybackslash}p{4cm} >{\centering\arraybackslash}p{4cm}}
-			Преподаватель & \uline{\mbox{\hspace*{4cm}}} & \uline{\hfill \textbf{Л.Л. Волкова} \hfill} \\
-			& \scriptsize (Подпись, дата) & \scriptsize (И.О. Фамилия)
-		\end{signstabular}
-
-		\vspace{\baselineskip}
-
-
-	\end{table}
-
-	\vfill
-
-	\begin{center}
-		\normalsize \textit{\textbf{2022} г.}
-	\end{center}
+	\restoregeometry
 \end{titlepage}
