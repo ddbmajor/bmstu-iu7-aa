@@ -1,0 +1,107 @@
+\section{Технологическая часть}
+
+\subsection{Выбор языка программирования, средств разработки}
+Для реализации алгоритмов был выбран язык C(c99). 
+В данной лабораторной работе необходимо замерить процессорное время,
+такую возможность дает стандартная библиотека \textbf{time.h}\cite{c99}.
+Компилятор - \textbf{GCC}\cite{gcc}.
+\subsection{Реализация алгоритмов}
+В листингах 1-4 представлены реализации алгоритмов нахождения
+расстояния Левенштейна и Дамерау-Левенштейна.
+\pagebreak
+\begin{code}
+	\captionsetup{justification=centering}
+	\captionof{listing}{Иттерационный алгоритм поиска расстояния Левенштейна}
+	\label{code:1}
+	\inputminted
+	[
+	frame=single,
+	framerule=0.5pt,
+	framesep=20pt,
+	fontsize=\small,
+	tabsize=4,
+	linenos,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	]
+	{text}
+	{code/l.c}
+\end{code}
+\pagebreak
+\begin{code}
+	\captionsetup{justification=centering}
+	\captionof{listing}{Иттерационный алгоритм поиска расстояния Дамерау-Левенштейна}
+	\label{code:2}
+	\inputminted
+	[
+	frame=single,
+	framerule=0.5pt,
+	framesep=20pt,
+	fontsize=\small,
+	tabsize=4,
+	linenos,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	]
+	{text}
+	{code/d.c}
+\end{code}
+\begin{code}
+	\captionsetup{justification=centering}
+	\captionof{listing}{Рекурсивный алгоритм поиска расстояния Дамерау-Левенштейна}
+	\label{code:3}
+	\inputminted
+	[
+	frame=single,
+	framerule=0.5pt,
+	framesep=20pt,
+	fontsize=\small,
+	tabsize=4,
+	linenos,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	]
+	{text}
+	{code/dr.c}
+\end{code}
+\pagebreak
+\begin{code}
+	\captionsetup{justification=centering}
+	\captionof{listing}{Рекурсивный с кэшем алгоритм поиска расстояния Дамерау-Левенштейна}
+	\label{code:4}
+	\inputminted
+	[
+	frame=single,
+	framerule=0.5pt,
+	framesep=20pt,
+	fontsize=\small,
+	tabsize=4,
+	linenos,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	]
+	{text}
+	{code/drc.c}
+\end{code}
+
+\subsection{Тестирование}
+В таблице 1 приведены тесты для функций, реализующих алгоритмы поиска расстояний Левенштейна и Дамерау-Левенштейна. Тесты для всех
+алгоритмов пройдены успешно.\par
+\begin{table}[h]
+	\caption{Проведенные тесты}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    №  & Строка 1 & Строка 2 & Результат Левенштейн & Результат Дамерау-Л. \\ \hline
+    1  & \textquotedbl\textquotedbl       & \textquotedbl\textquotedbl       & 0                    & 0                    \\ \hline
+    2  & \textquotedbl\textquotedbl       & mama     & 4                    & 4                    \\ \hline
+    3  & babushka & \textquotedbl\textquotedbl       & 8                    & 8                    \\ \hline
+    4  & moloko   & oloko    & 1                    & 1                    \\ \hline
+    5  & baton    & at       & 3                    & 3                    \\ \hline
+    6  & remont   & pat      & 5                    & 5                    \\ \hline
+    7  & rov      & kit      & 3                    & 3                    \\ \hline
+    8  & tovar    & to       & 3                    & 3                    \\ \hline
+    9  & stakan   & satkan   & 2                    & 1                    \\ \hline
+    10 & aabb     & abab     & 2                    & 1                    \\ \hline
+    \end{tabular}
+    \end{table}
+\pagebreak
