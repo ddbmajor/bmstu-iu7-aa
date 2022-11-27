@@ -116,7 +116,7 @@
 		\label{for:last}
 		f_{last} = \begin{cases}
 			2, & \text{чётная,}\\
-			4 + M \cdot (4 + 14N), & \text{иначе.}
+			4 + M \cdot (4 + 15N), & \text{иначе.}
 		\end{cases}
 	\end{equation}
 \end{itemize}
@@ -149,13 +149,13 @@ f_{best} =  f_{a\_tmp} + f_{a\_tmp} + f_{cycle} + f_{last} \approx 11.5 \cdot MN
 	\item создания и инициализации массивов a\_tmp и b\_tmp, трудоёмкость которых (\ref{for:init}):
 
 	\item заполнения массива a\_tmp, трудоёмкость которого (\ref{for:ATMP_impr}):
-	\item \begin{equation}
+	\begin{equation}
 		\label{for:ATMP_impr}
 		f_{a\_tmp} = 2 + K (2 + \frac{M}{2} \cdot 9);
 	\end{equation}
 
 	\item заполнения массива b\_tmp, трудоёмкость которого (\ref{for:BTMP_impr}):
-	\item \begin{equation}
+	\begin{equation}
 		\label{for:BTMP_impr}
 		f_{b\_tmp} = 2 + K (2 + \frac{N}{2} \cdot 9);
 	\end{equation}
@@ -163,7 +163,7 @@ f_{best} =  f_{a\_tmp} + f_{a\_tmp} + f_{cycle} + f_{last} \approx 11.5 \cdot MN
 	\item цикла заполнения для чётных размеров, трудоёмкость которого (\ref{for:cycle_impr}):
 	\begin{equation}
 		\label{for:cycle_impr}
-		f_{cycle} = 2 + M \cdot (9 + N \cdot (7 + \frac{K}{2} \cdot 20));
+		f_{cycle} = 2 + M \cdot (7 + N \cdot (9 + \frac{K}{2} \cdot 20));
 	\end{equation}
 	
 	\item цикла, который дополнительно нужен для подсчета значений при нечетном размере матрицы, трудоемкость которого (\ref{for:last_impr}):
@@ -171,7 +171,7 @@ f_{best} =  f_{a\_tmp} + f_{a\_tmp} + f_{cycle} + f_{last} \approx 11.5 \cdot MN
 		\label{for:last_impr}
 		f_{last} = \begin{cases}
 			2, & \text{чётная,}\\
-			4 + M \cdot (8 + 8N), & \text{иначе.}
+			6 + M \cdot (7 + 8N), & \text{иначе.}
 		\end{cases}
 	\end{equation}
 \end{itemize}

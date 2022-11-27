@@ -44,7 +44,7 @@ def vinograd_alg(mat_a, mat_b):
     for i in range(n):
         for j in range(t):
 
-            res_matrix[i][j] = -tmp_row[i] - tmp_col[i]
+            res_matrix[i][j] = -tmp_row[i] - tmp_col[j]
 
             for k in range(0, m // 2):
                 res_matrix[i][j] = res_matrix[i][j] + (mat_a[i][2 * k + 1] + mat_b[2 * k][j]) * (
@@ -82,20 +82,22 @@ def optimized_vinograd_alg(mat_a, mat_b):
             tmp_col[i] += mat_b[j << 1][i] * mat_b[(j << 1) + 1][i]
 
     for i in range(n):
-        tmp = -tmp_row[i] - tmp_col[i]  # Предвычисление
+        tmp = -tmp_row[i]  # Предвычисление
 
         for j in range(t):
 
-            res_matrix[i][j] = tmp
+            res_matrix[i][j] = tmp - tmp_col[j]
 
             for k in range(0, m // 2):
                 res_matrix[i][j] += (mat_a[i][(k << 1) + 1] + mat_b[k << 1][j]) * (
                             mat_a[i][k << 1] + mat_b[(k << 1) + 1][j])
 
+
     if m % 2 == 1:
+        m_min_one = m - 1
         for i in range(n):
-            tmp = mat_a[i][m - 1]  # Предвычисление
+            tmp = mat_a[i][m_min_one]  # Предвычисление
             for j in range(t):
-                res_matrix[i][j] += tmp * mat_b[m - 1][j]
+                res_matrix[i][j] += tmp * mat_b[m_min_one][j]
 
     return res_matrix

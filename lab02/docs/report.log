@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.26)  27 NOV 2022 22:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.26)  28 NOV 2022 00:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1411,35 +1411,35 @@ Package pdftex.def Info: img/stand_alg.png  used on input line 26.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/vin_alg1.png, id=218, 761.84625pt x 713.66624pt>
+<img/vin_alg1.png, id=218, 474.77374pt x 941.5175pt>
 File: img/vin_alg1.png Graphic file (type png)
 <use img/vin_alg1.png>
 Package pdftex.def Info: img/vin_alg1.png  used on input line 27.
-(pdftex.def)             Requested size: 457.11128pt x 428.20305pt.
+(pdftex.def)             Requested size: 284.86644pt x 564.91487pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/vin_alg2.png, id=219, 721.69624pt x 783.92876pt>
+<img/vin_alg2.png, id=219, 743.77875pt x 946.53625pt>
 File: img/vin_alg2.png Graphic file (type png)
 <use img/vin_alg2.png>
 Package pdftex.def Info: img/vin_alg2.png  used on input line 28.
-(pdftex.def)             Requested size: 433.02109pt x 470.36089pt.
+(pdftex.def)             Requested size: 446.27069pt x 567.92615pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/opt_vin_alg1.png, id=220, 761.84625pt x 713.66624pt>
+<img/opt_vin_alg1.png, id=220, 510.90875pt x 911.405pt>
 File: img/opt_vin_alg1.png Graphic file (type png)
 <use img/opt_vin_alg1.png>
 Package pdftex.def Info: img/opt_vin_alg1.png  used on input line 29.
-(pdftex.def)             Requested size: 457.11128pt x 428.20305pt.
+(pdftex.def)             Requested size: 306.5476pt x 546.84721pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/opt_vin_alg2.png, id=221, 721.69624pt x 783.92876pt>
+<img/opt_vin_alg2.png, id=221, 782.925pt x 1036.87375pt>
 File: img/opt_vin_alg2.png Graphic file (type png)
 <use img/opt_vin_alg2.png>
 Package pdftex.def Info: img/opt_vin_alg2.png  used on input line 30.
-(pdftex.def)             Requested size: 433.02109pt x 470.36089pt.
+(pdftex.def)             Requested size: 469.75862pt x 622.12904pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1505,7 +1505,7 @@ File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
 
 ]
-<img/example.jpg, id=451, 1112.155pt x 1077.02374pt>
+<img/example.jpg, id=452, 1112.155pt x 1077.02374pt>
 File: img/example.jpg Graphic file (type jpg)
 <use img/example.jpg>
 Package pdftex.def Info: img/example.jpg  used on input line 22.
@@ -1513,12 +1513,12 @@ Package pdftex.def Info: img/example.jpg  used on input line 22.
  [23 <./img/example.jpg>] [24
 
 ]
-<img/graph_even_sizes.jpg, id=470, 873.2625pt x 662.475pt>
+<img/graph_even_sizes.jpg, id=471, 873.2625pt x 662.475pt>
 File: img/graph_even_sizes.jpg Graphic file (type jpg)
 <use img/graph_even_sizes.jpg>
 Package pdftex.def Info: img/graph_even_sizes.jpg  used on input line 110.
 (pdftex.def)             Requested size: 375.05583pt x 284.52756pt.
-<img/graph_odd_sizes.jpg, id=471, 889.3225pt x 646.415pt>
+<img/graph_odd_sizes.jpg, id=472, 889.3225pt x 646.415pt>
 File: img/graph_odd_sizes.jpg Graphic file (type jpg)
 <use img/graph_odd_sizes.jpg>
 Package pdftex.def Info: img/graph_odd_sizes.jpg  used on input line 111.
@@ -1567,10 +1567,10 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: EF0DFF5D919F4DED1937635B7838CB0F;6055.
  ) 
 Here is how much of TeX's memory you used:
- 39017 strings out of 479721
- 904425 string characters out of 5887697
- 1386109 words of memory out of 5000000
- 56039 multiletter control sequences out of 15000+600000
+ 39019 strings out of 479721
+ 904455 string characters out of 5887697
+ 1386107 words of memory out of 5000000
+ 56040 multiletter control sequences out of 15000+600000
  488884 words of font info for 65 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  106i,18n,99p,928b,2017s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1594,10 +1594,10 @@ msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (30 pages, 690613 bytes).
+Output written on report.pdf (30 pages, 749375 bytes).
 PDF statistics:
- 1126 PDF objects out of 1200 (max. 8388607)
- 552 compressed objects within 6 object streams
- 199 named destinations out of 1000 (max. 500000)
+ 1127 PDF objects out of 1200 (max. 8388607)
+ 553 compressed objects within 6 object streams
+ 200 named destinations out of 1000 (max. 500000)
  310 words of extra memory for PDF output out of 10000 (max. 10000000)
 
