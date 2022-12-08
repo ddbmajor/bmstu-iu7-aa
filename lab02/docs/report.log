@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.26)  28 NOV 2022 00:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.26)  8 DEC 2022 23:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1231,7 +1231,7 @@ Package geometry Warning: `pdftex': not available in `\newgeometry'; skipped.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<img/b_logo.jpg, id=123, 57.816pt x 65.3715pt>
+<img/b_logo.jpg, id=127, 57.816pt x 65.3715pt>
 File: img/b_logo.jpg Graphic file (type jpg)
 <use img/b_logo.jpg>
 Package pdftex.def Info: img/b_logo.jpg  used on input line 5.
@@ -1337,6 +1337,11 @@ Overfull \hbox (1.58731pt too wide) in paragraph at lines 27--33
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 27--33
+
+ []
+
+
 Overfull \hbox (16.11433pt too wide) in paragraph at lines 27--33
 \T2A/cmr/bx/n/12 Преподаватель $[]$ 
  []
@@ -1358,7 +1363,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--33
 dentifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...er}{Р—Р°РєР»СЋС‡РµРЅРёРµ}{28}{chapter*.17}
+l.30 ...er}{Р—Р°РєР»СЋС‡РµРЅРёРµ}{28}{chapter*.17}
                                                   % [1
 
 
@@ -1393,7 +1398,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
 
 
-] [5]) [6]
+] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+) [6]
 \openout2 = `design.aux'.
 
  (./design.tex
@@ -1403,7 +1413,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-<img/stand_alg.png, id=216, 404.51125pt x 794.97pt>
+<img/stand_alg.png, id=220, 404.51125pt x 794.97pt>
 File: img/stand_alg.png Graphic file (type png)
 <use img/stand_alg.png>
 Package pdftex.def Info: img/stand_alg.png  used on input line 26.
@@ -1411,7 +1421,7 @@ Package pdftex.def Info: img/stand_alg.png  used on input line 26.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/vin_alg1.png, id=218, 474.77374pt x 941.5175pt>
+<img/vin_alg1.png, id=222, 474.77374pt x 941.5175pt>
 File: img/vin_alg1.png Graphic file (type png)
 <use img/vin_alg1.png>
 Package pdftex.def Info: img/vin_alg1.png  used on input line 27.
@@ -1419,7 +1429,7 @@ Package pdftex.def Info: img/vin_alg1.png  used on input line 27.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/vin_alg2.png, id=219, 743.77875pt x 946.53625pt>
+<img/vin_alg2.png, id=223, 743.77875pt x 946.53625pt>
 File: img/vin_alg2.png Graphic file (type png)
 <use img/vin_alg2.png>
 Package pdftex.def Info: img/vin_alg2.png  used on input line 28.
@@ -1427,7 +1437,7 @@ Package pdftex.def Info: img/vin_alg2.png  used on input line 28.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/opt_vin_alg1.png, id=220, 510.90875pt x 911.405pt>
+<img/opt_vin_alg1.png, id=224, 510.90875pt x 911.405pt>
 File: img/opt_vin_alg1.png Graphic file (type png)
 <use img/opt_vin_alg1.png>
 Package pdftex.def Info: img/opt_vin_alg1.png  used on input line 29.
@@ -1435,7 +1445,7 @@ Package pdftex.def Info: img/opt_vin_alg1.png  used on input line 29.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/opt_vin_alg2.png, id=221, 782.925pt x 1036.87375pt>
+<img/opt_vin_alg2.png, id=225, 782.925pt x 1036.87375pt>
 File: img/opt_vin_alg2.png Graphic file (type png)
 <use img/opt_vin_alg2.png>
 Package pdftex.def Info: img/opt_vin_alg2.png  used on input line 30.
@@ -1462,18 +1472,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
 [13
 
-]
-Overfull \hbox (12.7955pt too wide) in paragraph at lines 77--78
-[]\T2A/cmr/m/n/14.4 Поскольку тру-до-ем-кость стан-дарт-но-го ал-го-рит-ма рав-
-на тру-до-ем-ко-сти внеш-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
-[15]) [16] [17]
+[15]
+Overfull \hbox (0.46468pt too wide) in paragraph at lines 196--196
+ |[]\T2A/cmr/bx/n/20.74 Классы эк-ви-ва-лент-но-сти при те-сти-ро-ва-
+ []
+
+) [16] [17]
 \openout2 = `implement.aux'.
 
  (./implement.tex
@@ -1505,7 +1514,7 @@ File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
 
 ]
-<img/example.jpg, id=452, 1112.155pt x 1077.02374pt>
+<img/example.jpg, id=436, 1112.155pt x 1077.02374pt>
 File: img/example.jpg Graphic file (type jpg)
 <use img/example.jpg>
 Package pdftex.def Info: img/example.jpg  used on input line 22.
@@ -1513,12 +1522,12 @@ Package pdftex.def Info: img/example.jpg  used on input line 22.
  [23 <./img/example.jpg>] [24
 
 ]
-<img/graph_even_sizes.jpg, id=471, 873.2625pt x 662.475pt>
+<img/graph_even_sizes.jpg, id=455, 873.2625pt x 662.475pt>
 File: img/graph_even_sizes.jpg Graphic file (type jpg)
 <use img/graph_even_sizes.jpg>
 Package pdftex.def Info: img/graph_even_sizes.jpg  used on input line 110.
 (pdftex.def)             Requested size: 375.05583pt x 284.52756pt.
-<img/graph_odd_sizes.jpg, id=472, 889.3225pt x 646.415pt>
+<img/graph_odd_sizes.jpg, id=456, 889.3225pt x 646.415pt>
 File: img/graph_odd_sizes.jpg Graphic file (type jpg)
 <use img/graph_odd_sizes.jpg>
 Package pdftex.def Info: img/graph_odd_sizes.jpg  used on input line 111.
@@ -1564,16 +1573,16 @@ Overfull \hbox (2.55064pt too wide) in paragraph at lines 22--23
 (./contents.aux) (./introd.aux) (./analysis.aux) (./design.aux)
 (./implement.aux) (./research.aux) (./conclusion.aux) (./lib.aux))
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: EF0DFF5D919F4DED1937635B7838CB0F;6055.
+(rerunfilecheck)             Checksum: C0E0C0EA86CCFB6D185F786810557C08;6614.
  ) 
 Here is how much of TeX's memory you used:
- 39019 strings out of 479721
- 904455 string characters out of 5887697
- 1386107 words of memory out of 5000000
- 56040 multiletter control sequences out of 15000+600000
+ 39010 strings out of 479721
+ 904353 string characters out of 5887697
+ 1386109 words of memory out of 5000000
+ 56034 multiletter control sequences out of 15000+600000
  488884 words of font info for 65 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 106i,18n,99p,928b,2017s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,18n,99p,928b,1599s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/ddbmajor/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss1200.
 600pk> </home/ddbmajor/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lass120
 0.600pk> </home/ddbmajor/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lasx1
@@ -1594,10 +1603,10 @@ msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (30 pages, 749375 bytes).
+Output written on report.pdf (30 pages, 750479 bytes).
 PDF statistics:
- 1127 PDF objects out of 1200 (max. 8388607)
- 553 compressed objects within 6 object streams
- 200 named destinations out of 1000 (max. 500000)
- 310 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1113 PDF objects out of 1200 (max. 8388607)
+ 536 compressed objects within 6 object streams
+ 197 named destinations out of 1000 (max. 500000)
+ 318 words of extra memory for PDF output out of 10000 (max. 10000000)
 

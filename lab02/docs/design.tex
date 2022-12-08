@@ -6,9 +6,9 @@
 При реализации алгоритмов будут использованы следующие типы данных:
 
 \begin{itemize}
-	\item количество строк - целое число типа \textit{int}
-	\item количество столбцов - целое число типа \textit{int}
-	\item матрица - двумерный список типа \textit{int}
+	\item количество строк - целое число типа \textit{int};
+	\item количество столбцов - целое число типа \textit{int};
+	\item матрица - двумерный список типа \textit{int}.
 \end{itemize}
 
 
@@ -20,7 +20,7 @@
 \end{itemize}
 
 
-\section{Схемы алгоритмов}
+\section{Разроботка алгоритмов}
 На рисунке \ref{img:stand_alg} представлена схема алгоритма для стандартного умножения матриц. На рисунках \ref{img:vin_alg1}-\ref{img:vin_alg2} схема алгоритма Винограда умножения матриц, а на \ref{img:opt_vin_alg1}-\ref{img:opt_vin_alg2} - схема оптимизированного алгоритма Винограда. 
 
 \imgScale{0.8}{stand_alg}{Схема стандартного алгоритма умножения матриц}
@@ -36,28 +36,28 @@
 
 Чтобы провести вычисление трудоемкости алгоритмов умножения матриц, введем модель вычислений \cite{model}:
 
-\begin{enumerate}
-	\item операции из списка (\ref{for:opers}) имеют трудоемкость 1;
+\begin{itemize}
+	\item операции из данного списка имеют трудоемкость 1:
 	\begin{equation}
 		\label{for:opers}
-		+, -, *, /, \%, ==, !=, <, >, <=, >=, [], ++, {-}-
+		+, -, *, /, \%, ==, !=, <, >, <=, >=, [], ++, {-}-\text{;}
 	\end{equation}
-	\item трудоемкость оператора выбора \code{if условие then A else B} рассчитывается, как (\ref{for:if});
+	\item трудоемкость оператора выбора \code{if условие then A else B} рассчитывается, как:
 	\begin{equation}
 		\label{for:if}
 		f_{if} = f_{\text{условия}} +
 		\begin{cases}
 			f_A, & \text{если условие выполняется,}\\
-			f_B, & \text{иначе.}
+			f_B, & \text{иначе;}
 		\end{cases}
 	\end{equation}
-	\item трудоемкость цикла рассчитывается, как (\ref{for:for});
+	\item трудоемкость цикла рассчитывается, как:
 	\begin{equation}
 		\label{for:for}
-		f_{for} = f_{\text{инициализации}} + f_{\text{сравнения}} + N(f_{\text{тела}} + f_{\text{инкремента}} + f_{\text{сравнения}})
+		f_{for} = f_{\text{инициализации}} + f_{\text{сравнения}} + N(f_{\text{тела}} + f_{\text{инкремента}} + f_{\text{сравнения}})\text{;}
 	\end{equation}
 	\item трудоемкость вызова функции равна 0.
-\end{enumerate}
+\end{itemize}
 
 
 \section{Трудоемкость алгоритмов}
@@ -78,8 +78,11 @@
 
 \begin{equation}
 	\label{for:standard}
-	f_{standard} = 2 + M \cdot (4 + N \cdot (4 + 10K)) = 2 + 4M + 4MN + 10MNK \approx 10MNK
+	f_{standard} = 2 + M \cdot (4 + N \cdot (4 + 10K)) =
 \end{equation}
+\begin{displaymath}
+	= 2 + 4M + 4MN + 10MNK \approx 10MNK
+\end{displaymath}
 
 
 \subsection{Алгоритм Винограда}
@@ -87,31 +90,31 @@
 Чтобы вычислить трудоемкость алгоритма Винограда, нужно учесть следующее: 
 
 \begin{itemize}
-	\item создания и инициализации массивов a\_tmp и b\_tmp, трудоёмкость которых (\ref{for:init}):
+	\item создания и инициализации массивов a\_tmp и b\_tmp, трудоёмкость которых:
 	\begin{equation}
 		\label{for:init}
 		f_{init} = M + N;
 	\end{equation}
 	
-	\item заполнения массива a\_tmp, трудоёмкость которого (\ref{for:ATMP}):
+	\item заполнения массива a\_tmp, трудоёмкость которого:
 	\begin{equation}
 		\label{for:ATMP}
 		f_{a\_tmp} = 2 + K (2 + \frac{M}{2} \cdot 11);
 	\end{equation}
 	
-	\item заполнения массива b\_tmp, трудоёмкость которого (\ref{for:BTMP}):
+	\item заполнения массива b\_tmp, трудоёмкость которого:
 	\begin{equation}
 		\label{for:BTMP}
 		f_{b\_tmp} = 2 + K (2 + \frac{N}{2} \cdot 11);
 	\end{equation}
 	
-	\item цикла заполнения для чётных размеров, трудоёмкость которого (\ref{for:cycle}):
+	\item цикла заполнения для чётных размеров, трудоёмкость которого:
 	\begin{equation}
 		\label{for:cycle}
 		f_{cycle} = 2 + M \cdot (4 + N \cdot (11 + \frac{K}{2} \cdot 23));
 	\end{equation}
 	
-	\item цикла, который дополнительно нужен для подсчета значений при нечетном размере матрицы, трудоемкость которого (\ref{for:last}):
+	\item цикла, который дополнительно нужен для подсчета значений при нечетном размере матрицы, трудоемкость которого:
 	\begin{equation}
 		\label{for:last}
 		f_{last} = \begin{cases}
@@ -121,13 +124,13 @@
 	\end{equation}
 \end{itemize}
 
-Тогда для худшего случая (нечётный общий размер матриц) имеем (\ref{for:bad}):
+Тогда для худшего случая (нечётный общий размер матриц) имеем:
 \begin{equation}
 	\label{for:bad}
 	f_{worst} =  f_{a\_tmp} + f_{b\_tmp} + f_{cycle} + f_{last}\approx 11.5 \cdot MNK
 \end{equation}
 
-Для лучшего случая (чётный общий размер матриц) имеем (\ref{for:good}):
+Для лучшего случая (чётный общий размер матриц) имеем:
 \begin{equation}
 	\label{for:good}
 f_{best} =  f_{a\_tmp} + f_{a\_tmp} + f_{cycle} + f_{last} \approx 11.5 \cdot MNK
@@ -146,27 +149,27 @@ f_{best} =  f_{a\_tmp} + f_{a\_tmp} + f_{cycle} + f_{last} \approx 11.5 \cdot MN
 Чтобы вычислить трудоемкость оптимизированного алгоритма Винограда, нужно учесть следующее: 
 
 \begin{itemize}
-	\item создания и инициализации массивов a\_tmp и b\_tmp, трудоёмкость которых (\ref{for:init}):
+	\item создания и инициализации массивов a\_tmp и b\_tmp, трудоёмкость которых (\ref{for:init});
 
-	\item заполнения массива a\_tmp, трудоёмкость которого (\ref{for:ATMP_impr}):
+	\item заполнения массива a\_tmp, трудоёмкость которого:
 	\begin{equation}
 		\label{for:ATMP_impr}
 		f_{a\_tmp} = 2 + K (2 + \frac{M}{2} \cdot 9);
 	\end{equation}
 
-	\item заполнения массива b\_tmp, трудоёмкость которого (\ref{for:BTMP_impr}):
+	\item заполнения массива b\_tmp, трудоёмкость которого:
 	\begin{equation}
 		\label{for:BTMP_impr}
 		f_{b\_tmp} = 2 + K (2 + \frac{N}{2} \cdot 9);
 	\end{equation}
 
-	\item цикла заполнения для чётных размеров, трудоёмкость которого (\ref{for:cycle_impr}):
+	\item цикла заполнения для чётных размеров, трудоёмкость которого:
 	\begin{equation}
 		\label{for:cycle_impr}
 		f_{cycle} = 2 + M \cdot (7 + N \cdot (9 + \frac{K}{2} \cdot 20));
 	\end{equation}
 	
-	\item цикла, который дополнительно нужен для подсчета значений при нечетном размере матрицы, трудоемкость которого (\ref{for:last_impr}):
+	\item цикла, который дополнительно нужен для подсчета значений при нечетном размере матрицы, трудоемкость которого:
 	\begin{equation}
 		\label{for:last_impr}
 		f_{last} = \begin{cases}
@@ -176,13 +179,13 @@ f_{best} =  f_{a\_tmp} + f_{a\_tmp} + f_{cycle} + f_{last} \approx 11.5 \cdot MN
 	\end{equation}
 \end{itemize}
 
-Тогда для худшего случая (нечётный общий размер матриц) имеем (\ref{for:bad_impr}):
+Тогда для худшего случая (нечётный общий размер матриц) имеем:
 \begin{equation}
 	\label{for:bad_impr}
 	f_{worst} =  f_{a\_tmp} + f_{b\_tmp} + f_{cycle} + f_{last}\approx 10 \cdot MNK
 \end{equation}
 
-Для лучшего случая (чётный общий размер матриц) имеем (\ref{for:good_impr}):
+Для лучшего случая (чётный общий размер матриц) имеем:
 \begin{equation}
 	\label{for:good_impr}
 	f_{best} =  f_{a\_tmp} + f_{a\_tmp} + f_{cycle} + f_{last} \approx 10 \cdot MNK
