@@ -9,7 +9,7 @@
 \setmainfont{Times New Roman}
 
 % ГОСТовские настройки для полей и абзацев
-\usepackage[left=30mm,right=10mm,top=20mm,bottom=20mm]{geometry}
+\usepackage[left=30mm,right=15mm,top=20mm,bottom=20mm]{geometry}
 \usepackage{misccorr}
 \usepackage{indentfirst}
 \usepackage{enumitem}
@@ -32,7 +32,7 @@
 % Переопределение их отступов до и после для 1.5 интервала во всем документе
 \usepackage{titlesec}
 
-\titleformat{\section}[block]
+\titleformat{\section}[hang]
 {\bfseries\normalsize\filcenter}{\thesection}{1em}{}
 
 \titleformat{\subsection}[hang]
@@ -79,7 +79,7 @@
 \usepackage{listings}
 \lstset{
 	basicstyle=\footnotesize\ttfamily,
-	language=[Sharp]C, % Или другой ваш язык -- см. документацию пакета
+	language=[Sharp]C, 
 	commentstyle=\color{comment},
 	numbers=left,
 	numberstyle=\tiny\color{plain},
@@ -131,6 +131,9 @@
 
 \usepackage{amsmath}
 \usepackage{slashbox}
+
+% \usepackage{sectsty}
+% \sectionfont{\bfseries\Large\raggedright}
 
 % объявляем новую команду для переноса строки внутри ячейки таблицы
 \newcommand{\specialcell}[2][c]{%

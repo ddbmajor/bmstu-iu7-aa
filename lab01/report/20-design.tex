@@ -1,5 +1,6 @@
 \section{Конструкторская часть}
 \subsection{Алгоритмы поиска редакционных расстояний}
+На рисунках \ref{fig:d11}--\ref{fig:d42} представлены схемы исследуемых алгоритмов поиска редакционного расстояния.
 \subsubsection{Иттерационный алгоритм поиска расстояния Левенштейна}
 \begin{figure}[!h]
 	\centering
@@ -12,7 +13,7 @@
 \begin{figure}[!h]
 	\centering
 	\captionsetup{justification=centering}
-    \def\svgscale{0.5}
+    \def\svgscale{0.8}
 	\includesvg[]{img/l2.svg}
 	\caption{Иттерационный алгоритм поиска расстояния Левенштейна. Ч.2.}
 	\label{fig:d12}
@@ -20,19 +21,20 @@
 \pagebreak
 
 Оценка памяти алгоритма:\par
-Пусть n - длина строки s1, m - длина строки s2\par
+Пусть n - длина строки s1, m - длина строки s2.\par
 Тогда затраты по памяти будут:\par
 \begin{itemize}
-	\item[-] для матрицы - ((n+1)*(m+1)*sizeof(int));
-	\item[-] для s1, s2 - ((n+m)*sizeof(char));
-	\item[-] для n, m - (2*sizeof(int));
-	\item[-] для переменных индексации - (2*sizeof(int));
-	\item[-] для предыдущих символов строк - (2*sizeof(char));
-	\item[-] адрес возврата - (sizeof(int*)).
+	\item[-] для матрицы -- ((n+1)*(m+1)*sizeof(int));
+	\item[-] для s1, s2 -- ((n+m)*sizeof(char));
+	\item[-] для n, m -- (2*sizeof(int));
+	\item[-] для переменных индексации -- (2*sizeof(int));
+	\item[-] для предыдущих символов строк -- (2*sizeof(char));
+	\item[-] адрес возврата -- (sizeof(int*)).
 \end{itemize}
 \pagebreak
 
 \subsubsection{Иттерационный алгоритм поиска расстояния\\ Дамерау-Левенштейна}
+% На рисунках \ref{fig:d21}--\ref{fig:d23} представлен \par итерационный алгоритм Дамерау-Левенштейна.
 \begin{figure}[!h]
 	\centering
 	\captionsetup{justification=centering}
@@ -52,25 +54,28 @@
 \begin{figure}[!h]
 	\centering
 	\captionsetup{justification=centering}
-    \def\svgscale{0.4}
+    \def\svgscale{0.7}
 	\includesvg[]{img/d3.svg}
 	\caption{Иттерационный алгоритм поиска расстояния Дамерау-Левенштейна. Ч.3.}
 	\label{fig:d23}
 \end{figure}
 \pagebreak
+
+
 Оценка памяти алгоритма:\par
-Пусть n - длина строки s1, m - длина строки s2\par
+Пусть n - длина строки s1, m - длина строки s2.\par
 Тогда затраты по памяти будут:\par
 \begin{itemize}
-	\item[-] для матрицы - ((n+1)*(m+1)*sizeof(int));
-	\item[-] для s1, s2 - ((n+m)*sizeof(char));
-	\item[-] для n, m - (2*sizeof(int));
-	\item[-] для переменных индексации - (2*sizeof(int));
-	\item[-] для предыдущих символов строк - (4*sizeof(char));
-	\item[-] адрес возврата - (sizeof(int*)).
+	\item[-] для матрицы -- ((n+1)*(m+1)*sizeof(int));
+	\item[-] для s1, s2 -- ((n+m)*sizeof(char));
+	\item[-] для n, m -- (2*sizeof(int));
+	\item[-] для переменных индексации -- (2*sizeof(int));
+	\item[-] для предыдущих символов строк -- (4*sizeof(char));
+	\item[-] адрес возврата -- (sizeof(int*)).
 \end{itemize}
 \pagebreak
-\subsubsection{Рекурсивный алгоритм поиска расстояния Дамерау-Левенштейна}
+\subsubsection{Рекурсивный алгоритм поиска расстояния \newline Дамерау-Левенштейна}
+% На рисунках \ref{fig:d31}--\ref{fig:d32} представлен рекурсивный алгоритм поиска расстояния Дамерау-Левенштейна.
 \begin{figure}[!h]
 	\centering
 	\captionsetup{justification=centering}
@@ -87,17 +92,18 @@
 \end{figure}
 \pagebreak
 Оценка памяти алгоритма:\par
-Пусть n - длина строки s1, m - длина строки s2\par
+Пусть n -- длина строки s1, m -- длина строки s2.\par
 Тогда затраты по памяти \textbf{для каждого вызова} будут:\par
 \begin{itemize}
-	\item[-] для s1, s2 - ((n+m)*sizeof(char));
-	\item[-] для n, m - (2*sizeof(int));
-	\item[-] для предыдущих символов строк - (4*sizeof(char));
-	\item[-] адрес возврата - (sizeof(int*)).
+	\item[-] для s1, s2 -- ((n+m)*sizeof(char));
+	\item[-] для n, m -- (2*sizeof(int));
+	\item[-] для предыдущих символов строк -- (4*sizeof(char));
+	\item[-] адрес возврата -- (sizeof(int*)).
 \end{itemize}
 \pagebreak
 
-\subsubsection{Рекурсивный с кэшем алгоритм поиска расстояния Дамерау-Левенштейна}
+\subsubsection{Рекурсивный с кэшем алгоритм поиска \newline расстояния Дамерау-Левенштейна}
+% На рисунках \ref{fig:d41}--\ref{fig:d42} представлен рекурсивный с кэшем алгоритм поиска расстояния Дамерау-Левенштейна.
 \begin{figure}[!h]
 	\centering
 	\captionsetup{justification=centering}
@@ -109,18 +115,18 @@
 	\centering
 	\captionsetup{justification=centering}
 	\includesvg[width=\textwidth]{img/drc2.svg}
-	\caption{Рекурсивный с кэшем алгоритм поиска расстояния Дамерау-Левенштейна. Ч.2.}
+	\caption{Рекурсивный с кэшем алгоритм поиска \newline расстояния Дамерау-Левенштейна. Ч.2.}
 	\label{fig:d42}
 \end{figure}
 \pagebreak
 Оценка памяти алгоритма:\par
-Пусть n - длина строки s1, m - длина строки s2\par
+Пусть n -- длина строки s1, m -- длина строки s2\par
 Тогда затраты по памяти помимо матрицы((n+1)*(m+1)*sizeof(int)) \textbf{для каждого вызова} будут:\par
 \begin{itemize}
-	\item[-] для s1, s2 - ((n+m)*sizeof(char));
-	\item[-] для n, m - (2*sizeof(int));
-	\item[-] для предыдущих символов строк - (4*sizeof(char));
-	\item[-] адрес возврата - (sizeof(int*));
-	\item[-] ссылка на матрицу - (sizeof(int**)).
+	\item[-] для s1, s2 -- ((n+m)*sizeof(char));
+	\item[-] для n, m -- (2*sizeof(int));
+	\item[-] для предыдущих символов строк -- (4*sizeof(char));
+	\item[-] адрес возврата -- (sizeof(int*));
+	\item[-] ссылка на матрицу -- (sizeof(int**)).
 \end{itemize}
 \pagebreak

@@ -6,11 +6,11 @@
 такую возможность дает стандартная библиотека \textbf{time.h}\cite{c99}.
 Компилятор - \textbf{GCC}\cite{gcc}.
 \subsection{Реализация алгоритмов}
-В листингах 1-4 представлены реализации алгоритмов нахождения
+В листингах \ref{code:1}--\ref{code:4} представлены реализации алгоритмов нахождения
 расстояния Левенштейна и Дамерау-Левенштейна.
 \pagebreak
 \begin{code}
-	\captionsetup{justification=centering}
+	\captionsetup{singlelinecheck=false, justification=raggedright, labelsep=endash}
 	\captionof{listing}{Иттерационный алгоритм поиска расстояния Левенштейна}
 	\label{code:1}
 	\inputminted
@@ -18,7 +18,7 @@
 	frame=single,
 	framerule=0.5pt,
 	framesep=20pt,
-	fontsize=\small,
+	fontsize=\footnotesize,
 	tabsize=4,
 	linenos,
 	numbersep=5pt,
@@ -29,7 +29,7 @@
 \end{code}
 \pagebreak
 \begin{code}
-	\captionsetup{justification=centering}
+	\captionsetup{singlelinecheck=false, justification=raggedright, labelsep=endash}
 	\captionof{listing}{Иттерационный алгоритм поиска расстояния Дамерау-Левенштейна}
 	\label{code:2}
 	\inputminted
@@ -37,7 +37,7 @@
 	frame=single,
 	framerule=0.5pt,
 	framesep=20pt,
-	fontsize=\small,
+	fontsize=\footnotesize,
 	tabsize=4,
 	linenos,
 	numbersep=5pt,
@@ -47,7 +47,7 @@
 	{code/d.c}
 \end{code}
 \begin{code}
-	\captionsetup{justification=centering}
+	\captionsetup{singlelinecheck=false, justification=raggedright, labelsep=endash}
 	\captionof{listing}{Рекурсивный алгоритм поиска расстояния Дамерау-Левенштейна}
 	\label{code:3}
 	\inputminted
@@ -55,7 +55,7 @@
 	frame=single,
 	framerule=0.5pt,
 	framesep=20pt,
-	fontsize=\small,
+	fontsize=\footnotesize,
 	tabsize=4,
 	linenos,
 	numbersep=5pt,
@@ -66,7 +66,7 @@
 \end{code}
 \pagebreak
 \begin{code}
-	\captionsetup{justification=centering}
+	\captionsetup{singlelinecheck=false, justification=raggedright, labelsep=endash}
 	\captionof{listing}{Рекурсивный с кэшем алгоритм поиска расстояния Дамерау-Левенштейна}
 	\label{code:4}
 	\inputminted
@@ -74,7 +74,7 @@
 	frame=single,
 	framerule=0.5pt,
 	framesep=20pt,
-	fontsize=\small,
+	fontsize=\footnotesize,
 	tabsize=4,
 	linenos,
 	numbersep=5pt,
@@ -88,19 +88,20 @@
 В таблице 1 приведены тесты для функций, реализующих алгоритмы поиска расстояний Левенштейна и Дамерау-Левенштейна. Тесты для всех
 алгоритмов пройдены успешно.\par
 \begin{table}[h]
+	\captionsetup{justification=raggedright}
 	\caption{Проведенные тесты}
     \begin{tabular}{|c|c|c|c|c|}
     \hline
     №  & Строка 1 & Строка 2 & Результат Левенштейн & Результат Дамерау-Л. \\ \hline
     1  & \textquotedbl\textquotedbl       & \textquotedbl\textquotedbl       & 0                    & 0                    \\ \hline
-    2  & \textquotedbl\textquotedbl       & mama     & 4                    & 4                    \\ \hline
-    3  & babushka & \textquotedbl\textquotedbl       & 8                    & 8                    \\ \hline
-    4  & moloko   & oloko    & 1                    & 1                    \\ \hline
-    5  & baton    & at       & 3                    & 3                    \\ \hline
+    2  & \textquotedbl\textquotedbl       & papa     & 4                    & 4                    \\ \hline
+    3  & trambon  & \textquotedbl\textquotedbl       & 7                    & 7                    \\ \hline
+    4  & telik    & elik    & 1                    & 1                    \\ \hline
+    5  & kefir    & fi       & 3                    & 3                    \\ \hline
     6  & remont   & pat      & 5                    & 5                    \\ \hline
-    7  & rov      & kit      & 3                    & 3                    \\ \hline
-    8  & tovar    & to       & 3                    & 3                    \\ \hline
-    9  & stakan   & satkan   & 2                    & 1                    \\ \hline
+    7  & voz      & abc      & 3                    & 3                    \\ \hline
+    8  & lozhka   & loz      & 3                    & 3                    \\ \hline
+    9  & volodya  & voloyda   & 2                    & 1                    \\ \hline
     10 & aabb     & abab     & 2                    & 1                    \\ \hline
     \end{tabular}
     \end{table}
