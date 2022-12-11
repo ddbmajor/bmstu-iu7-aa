@@ -12,44 +12,44 @@ A level-1 auxiliary file: conclusion.aux
 A level-1 auxiliary file: lib.aux
 The style file: utf8gost705u.bst
 Database file #1: lib.bib
-You've used 9 entries,
+You've used 8 entries,
             2958 wiz_defined-function locations,
-            700 strings with 7069 characters,
-and the built_in function-call counts, 982 in all, are:
-= -- 92
-> -- 9
+            697 strings with 6900 characters,
+and the built_in function-call counts, 874 in all, are:
+= -- 81
+> -- 8
 < -- 0
-+ -- 9
++ -- 8
 - -- 0
-* -- 9
-:= -- 89
-add.period$ -- 16
-call.type$ -- 9
+* -- 8
+:= -- 80
+add.period$ -- 14
+call.type$ -- 8
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 63
-empty$ -- 145
+cite$ -- 8
+duplicate$ -- 56
+empty$ -- 129
 format.name$ -- 0
-if$ -- 246
+if$ -- 218
 int.to.chr$ -- 0
-int.to.str$ -- 9
+int.to.str$ -- 8
 missing$ -- 0
-newline$ -- 53
+newline$ -- 48
 num.names$ -- 0
-pop$ -- 56
+pop$ -- 50
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 30
+skip$ -- 27
 stack$ -- 0
 substring$ -- 0
-swap$ -- 25
+swap$ -- 22
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
 while$ -- 0
-width$ -- 10
-write$ -- 102
+width$ -- 9
+write$ -- 91
